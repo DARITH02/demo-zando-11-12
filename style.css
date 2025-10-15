@@ -24,11 +24,14 @@ ul {
   margin: auto;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
-.menu {
+.container-width {
+  width: 86%;
   margin: auto;
-  width: 88%;
+}
+
+.menu {
   height: 100%;
-  background-color: #eee;
+  /* background-color: #d91d1d; */
   display: flex;
 }
 .menu-left {
@@ -36,7 +39,7 @@ ul {
   /* background-color: aqua; */
 }
 .menu-center {
-  width: 25%;
+  width: 30%;
   /* background-color: blanchedalmond; */
   display: flex;
   justify-content: end;
@@ -44,15 +47,16 @@ ul {
   align-items: center;
 }
 .menu-right {
-  width: 45%;
-  background-color: rebeccapurple;
+  width: 40%;
+  display: flex;
+  justify-content: end;
 }
 .menu-left ul {
   display: flex;
-  gap: 20px;
+  gap: 1.5rem;
 }
 .menu-left ul li {
-  padding: 10px 10px;
+  padding: 15px 10px;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 2rem;
@@ -60,4 +64,80 @@ ul {
 
 .menu-center img {
   height: 30px;
+}
+.menu-left li:hover {
+  cursor: pointer;
+  background-color: rgb(202, 202, 202);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-right ul {
+  height: 100%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.search {
+  height: 100%;
+
+  width: 200px;
+  padding: 0.8rem 0;
+}
+.search div {
+  height: 100%;
+  border: solid 1px black;
+  border-radius: 0.5rem;
+  display: flex;
+}
+.search div span {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+.search div input {
+  width: 80%;
+  border: none;
+  background-color: transparent;
+}
+.search div input:focus {
+  outline: none;
+}
+.menu-right ul li i {
+  font-size: 2.2rem;
+}
+.menu-right ul li:not(:first-child) {
+  padding: 1.3rem 1rem;
+}
+.menu-right ul li:not(:first-child):hover {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  background-color: rgb(202, 202, 202);
+}
+.slid {
+  height: 630px;
+  background-color: blue;
+}
+.btn-slid {
+  position: absolute;
+  bottom: 8%;
+  gap: 30px;
+  display: flex;
+}
+.btn-slid button {
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: white 2px solid;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+.btn-slid button:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 5px 8px 5px;
 }

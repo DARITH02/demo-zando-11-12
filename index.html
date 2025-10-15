@@ -5,10 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
+
+  <style>
+    swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+
   <body>
     <nav class="navigation">
-      <div class="menu">
+      <div class="menu container-width">
         <div class="menu-left">
           <ul>
             <li>women</li>
@@ -23,8 +55,66 @@
             alt=""
           />
         </div>
-        <div class="menu-right">ritght</div>
+        <div class="menu-right">
+          <ul>
+            <li class="search">
+              <div>
+                <span>
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <input placeholder="Search...." type="text" />
+              </div>
+            </li>
+            <li><i class="fa-regular fa-bell"></i></li>
+            <li>
+              <i class="fa-regular fa-heart"></i>
+            </li>
+            <li><i class="fa-solid fa-bag-shopping"></i></li>
+            <li>Login</li>
+            <li>Register</li>
+          </ul>
+        </div>
       </div>
     </nav>
+
+    <!-- slide -->
+
+    <div class="container-width slid">
+      <swiper-container class="mySwiper">
+        <swiper-slide>
+          <img
+            src="https://zandokh.com/image/catalog/banner/2025/ZANDO/October/70OFFPB_Main%20(2160x1066).jpg"
+            alt=""
+          />
+
+          <div class="btn-slid">
+            <button>shop men</button>
+            <button>shop women</button>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <img
+            src="https://zandokh.com/image/catalog/banner/2025/ZANDO/October/Zando%20app%20banner.jpg"
+            alt=""
+          />
+          <div class="btn-slid">
+            <button style="border: black solid 3px; color: black">
+              shop now
+            </button>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <img
+            src="https://zandokh.com/image/catalog/banner/2025/ZANDO/September/50OFF_Main%20(2160x1066).jpg"
+            alt=""
+          />
+          <div class="btn-slid">
+            <button>shop men</button>
+            <button>shop women</button>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
   </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
