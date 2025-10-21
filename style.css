@@ -306,3 +306,47 @@ ul {
   writing-mode: vertical-rl;
   color: whitesmoke;
 }
+
+/* Scroll-to-top button style */
+#toTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Start hidden */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(30px);
+
+  /* Animation transition */
+  transition: all 0.4s ease;
+}
+
+/* Show with fade-in + slide-up */
+#toTopBtn.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Hover effect */
+#toTopBtn:hover {
+  background-color: #555;
+  transform: translateY(-3px);
+}
+
+/* Smooth scrolling for all page jumps */
+html {
+  scroll-behavior: smooth;
+}

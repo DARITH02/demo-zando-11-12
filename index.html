@@ -12,6 +12,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
 
   <style>
@@ -204,7 +209,6 @@
     </div>
 
     <!-- content items -->
-
     <div class="container-width content-item">
       <div class="txt-heading-content">
         <h1>🛍️ Water Festival Steals!</h1>
@@ -255,6 +259,33 @@
         </swiper-container>
       </div>
     </div>
+
+    <!--  -->
+    <button id="toTopBtn">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
   </body>
 </html>
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+<script>
+  const toTopBtn = document.getElementById("toTopBtn");
+
+  // Show button after scrolling down 200px
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      toTopBtn.classList.add("show");
+    } else {
+      toTopBtn.classList.remove("show");
+    }
+  });
+
+  // Scroll smoothly to top when clicked
+  toTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
